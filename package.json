@@ -1,0 +1,32 @@
+{
+  "name": "@krutoo/typed-redux-saga",
+  "type": "commonjs",
+  "version": "0.0.0",
+  "description": "Fixed version of typed-redux-saga",
+  "author": "Dmitry Petrov <dima.krutoo@yandex.ru>",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "npm run build:clean && npm run build:main && npm run build:types",
+    "build:clean": "rimraf dist",
+    "build:main": "babel src -d dist",
+    "build:types": "node scripts/build-types.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "rimraf": "^5.0.5",
+    "typed-redux-saga": "^1.5.0"
+  },
+  "peerDependencies": {
+    "redux-saga": "^1.3.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "types": "./dist/index.d.ts"
+}

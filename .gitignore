@@ -1,0 +1,7 @@
+node_modules
+
+# build artifacts
+dist
+
+# npm pack default output
+krutoo-typed-redux-saga-0.0.0.tgz

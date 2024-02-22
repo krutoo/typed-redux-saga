@@ -22,7 +22,7 @@ function* mySaga() {
   const response = yield* call(fetch, "/something");
 
   // 3. use just effect factory call (without `yield` or `yield*`) when you want to pass it to combinator (all or race)
-  const [a, b] = all([
+  const [a, b] = yield* all([
     // parallel calls
     call(computeA),
     call(computeB),
